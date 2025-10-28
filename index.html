@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Daffa Najib Fikri — Portfolio</title>
+  <meta name="description" content="Portfolio Muhammad Daffa Najib Fikri — Informatics enthusiast, developer, and maker." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN (quick prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config for custom color palette
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              700: '#4f46e5'
+            },
+            accent: '#7c3aed'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    /* small helper for focus outlines */
+    .focus-ring:focus { outline: 3px solid rgba(99,102,241,0.18); outline-offset: 3px; }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-white dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/60 dark:bg-gray-900/60 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3">
+          <!-- Logo / initials -->
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent flex items-center justify-center text-white font-semibold">DN</div>
+          <div class="hidden sm:block">
+            <div class="text-sm font-semibold">Muhammad Daffa Najib Fikri</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Informatics Enthusiast</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#home" class="hover:text-primary-500">Home</a>
+          <a href="#about" class="hover:text-primary-500">About</a>
+          <a href="#projects" class="hover:text-primary-500">Projects</a>
+          <a href="#skills" class="hover:text-primary-500">Skills</a>
+          <a href="#contact" class="hover:text-primary-500">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="p-2 rounded-md focus-ring" aria-label="Toggle dark mode">🌙</button>
+
+          <!-- Mobile menu button -->
+          <button id="mobileBtn" class="md:hidden p-2 rounded-md focus-ring" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-gray-900/90">
+      <div class="px-4 pt-4 pb-6 space-y-3">
+        <a href="#home" class="block">Home</a>
+        <a href="#about" class="block">About</a>
+        <a href="#projects" class="block">Projects</a>
+        <a href="#skills" class="block">Skills</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7">
+            <div class="max-w-2xl">
+              <p class="inline-block px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-700 mb-4">Hi, I’m Daffa 👋</p>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">I build things on the web & make robots play soccer.</h1>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">I’m Muhammad Daffa Najib Fikri — a creative and curious informatics student who loves coding, music, running, and robotics. I make small IoT projects, web apps, and learn new tech every day.</p>
+
+              <div class="mt-6 flex gap-3">
+                <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white font-medium shadow hover:scale-[1.02] transition-transform">View My Projects</a>
+                <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-sm">Contact Me</a>
+              </div>
+
+              <div class="mt-6 text-sm text-gray-500 dark:text-gray-400">Instagram: <a href="https://instagram.com/daffanajibfikri" class="text-primary-500 hover:underline">@daffanajibfikri</a></div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <!-- Profile circle with SVG initials -->
+            <div class="w-52 h-52 rounded-full bg-gradient-to-br from-primary-500 to-accent p-1 shadow-lg transform hover:scale-105 transition-transform">
+              <div class="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
+                <img src="img/porto.png" alt="Muhammad Daffa Najib Fikri" class="w-48 h-48 rounded-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- decorative gradient shapes -->
+      <div class="pointer-events-none absolute -right-16 -top-8 opacity-30 transform rotate-12 w-64 h-64 bg-gradient-to-br from-primary-200 to-accent rounded-3xl blur-3xl"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold">About</h2>
+          <p class="mt-4 text-gray-600 dark:text-gray-300">I enjoy learning new technologies and turning ideas into working projects. I have experience with web development (HTML, CSS, JavaScript), Tailwind CSS, Python, and microcontroller projects like micro:bit and TinyBit. Outside coding I love sports (futsal, football, swimming), listening to music, and running.</p>
+
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 shadow-sm">
+              <h3 class="text-sm font-semibold">Education</h3>
+              <p class="mt-2 text-sm text-gray-500">Student — Informatics / Aspiring at Politeknik IDN</p>
+            </div>
+            <div class="p-4 rounded-lg border border-gray-100 dark:border-gray-800 shadow-sm">
+              <h3 class="text-sm font-semibold">Interests</h3>
+              <p class="mt-2 text-sm text-gray-500">Robotics, IoT, Web Dev, Game Dev, Music</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+          <h3 class="font-semibold">Quick facts</h3>
+          <ul class="mt-3 text-sm text-gray-600 dark:text-gray-300 space-y-2">
+            <li>📍 Indonesia</li>
+            <li>🏃 Likes running</li>
+            <li>🎧 Music & games</li>
+            <li>🤖 Robotics hobbyist</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Projects</h2>
+        <p class="text-sm text-gray-500">Selected work, prototypes & school projects</p>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project card (repeatable) -->
+        <article class="group rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 shadow hover:shadow-lg transition-shadow transform hover:-translate-y-1">
+          <div class="h-40 bg-gradient-to-br from-primary-50 to-accent flex items-center justify-center">
+            <div class="text-sm text-gray-600 dark:text-gray-300">Project screenshot</div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">TinyBit Soccer Robot</h3>
+            <p class="mt-2 text-sm text-gray-500">A small robot that plays miniature soccer using IR sensors and TinyBit microcontroller. Built for school competition.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="#" class="text-sm font-medium text-primary-600 hover:underline">View code</a>
+              <div class="text-xs text-gray-400">2025</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 shadow hover:shadow-lg transition-shadow transform hover:-translate-y-1">
+          <div class="h-40 bg-gradient-to-br from-primary-50 to-accent flex items-center justify-center">
+            <div class="text-sm text-gray-600 dark:text-gray-300">Project screenshot</div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">Portfolio Website</h3>
+            <p class="mt-2 text-sm text-gray-500">This site — an example portfolio built with HTML + Tailwind CSS, responsive and easy to customize.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="#" class="text-sm font-medium text-primary-600 hover:underline">View code</a>
+              <div class="text-xs text-gray-400">2025</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 shadow hover:shadow-lg transition-shadow transform hover:-translate-y-1">
+          <div class="h-40 bg-gradient-to-br from-primary-50 to-accent flex items-center justify-center">
+            <div class="text-sm text-gray-600 dark:text-gray-300">Project screenshot</div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold">IoT Plant Monitor</h3>
+            <p class="mt-2 text-sm text-gray-500">Prototype using sensors to measure soil moisture and send updates to a simple dashboard.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="#" class="text-sm font-medium text-primary-600 hover:underline">View code</a>
+              <div class="text-xs text-gray-400">2024</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="#" class="inline-block px-5 py-2 border rounded-lg text-sm">See more on GitHub</a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <h2 class="text-2xl font-bold">Skills</h2>
+      <p class="mt-2 text-sm text-gray-500">Tools, languages, and technologies I work with.</p>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- skill item -->
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">HTML & CSS</span>
+            <span class="text-sm text-gray-500">90%</span>
+          </div>
+          <div class="mt-2 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full rounded-full" style="width:90%; background:linear-gradient(90deg,#6366f1,#7c3aed)"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Tailwind CSS</span>
+            <span class="text-sm text-gray-500">85%</span>
+          </div>
+          <div class="mt-2 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full rounded-full" style="width:85%; background:linear-gradient(90deg,#6366f1,#7c3aed)"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Laravel</span>
+            <span class="text-sm text-gray-500">70%</span>
+          </div>
+          <div class="mt-2 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full rounded-full" style="width:70%; background:linear-gradient(90deg,#6366f1,#7c3aed)"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Boostrap</span>
+            <span class="text-sm text-gray-500">70%</span>
+          </div>
+          <div class="mt-2 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full rounded-full" style="width:70%; background:linear-gradient(90deg,#6366f1,#7c3aed)"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">C++</span>
+            <span class="text-sm text-gray-500">70%</span>
+          </div>
+          <div class="mt-2 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full rounded-full" style="width:70%; background:linear-gradient(90deg,#6366f1,#7c3aed)"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium">Python & IoT</span>
+            <span class="text-sm text-gray-500">75%</span>
+          </div>
+          <div class="mt-2 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full rounded-full" style="width:75%; background:linear-gradient(90deg,#6366f1,#7c3aed)"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <h2 class="text-2xl font-bold">Contact Me</h2>
+      <p class="mt-2 text-sm text-gray-500">Have a project or want to say hi? Send a message.</p>
+
+      <form class="mt-6 space-y-4 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-6 rounded-lg shadow-sm">
+        <div>
+          <label class="block text-sm font-medium">Name</label>
+          <input type="text" class="mt-1 block w-full rounded-md border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-2 focus-ring" placeholder="Your name" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Email</label>
+          <input type="email" class="mt-1 block w-full rounded-md border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-2 focus-ring" placeholder="you@email.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Message</label>
+          <textarea class="mt-1 block w-full rounded-md border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-2 focus-ring" rows="4" placeholder="Write a short message"></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="text-sm text-gray-500">Or reach me on <a href="https://instagram.com/daffanajibfikri" class="text-primary-600">@daffanajibfikri</a></div>
+          <button type="button" class="px-4 py-2 rounded-lg bg-primary-600 text-white">Send message</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-100 dark:border-gray-800 bg-white/60 dark:bg-gray-900/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-sm">© <span id="year"></span> Muhammad Daffa Najib Fikri. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/" class="text-sm hover:underline">GitHub</a>
+        <a href="https://linkedin.com/" class="text-sm hover:underline">LinkedIn</a>
+        <a href="https://instagram.com/daffanajibfikri" class="text-sm hover:underline">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile menu toggle
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // simple dark mode toggle (persist in localStorage)
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    function setThemeMode(mode) {
+      if (mode === 'dark') root.classList.add('dark');
+      else root.classList.remove('dark');
+      localStorage.setItem('site-theme', mode);
+    }
+    const saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setThemeMode(saved);
+    themeToggle.addEventListener('click', () => setThemeMode(root.classList.contains('dark') ? 'light' : 'dark'));
+
+    // small accessibility: add focus-visible style
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') document.body.classList.add('using-keyboard');
+    });
+  </script>
+
+</body>
+</html>
