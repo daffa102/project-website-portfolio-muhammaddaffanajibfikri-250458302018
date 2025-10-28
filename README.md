@@ -40,7 +40,7 @@ cd portfolio-website
 # Klik kanan pada file index.html dan pilih "Open with Live Server"
 ```
 ### 3️⃣ Sesuaikan konten  
-Edit file `index.html` untuk menambahkan proyek, pengalaman, dan informasi kontak Anda sendiri.
+> Edit file `index.html` untuk menambahkan proyek, pengalaman, dan informasi kontak Anda sendiri.
 ---
 ## 📄 Lisensi
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
